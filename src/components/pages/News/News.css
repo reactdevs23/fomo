@@ -24,6 +24,7 @@
   background: #ffffff;
   box-shadow: 3px 4px 71px rgba(102, 102, 102, 0.2);
   border-radius: 4px;
+  text-decoration: none;
 }
 .article-item h2 {
   font-family: "Segoe UI";
