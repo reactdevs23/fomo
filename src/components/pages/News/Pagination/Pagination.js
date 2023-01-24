@@ -5,7 +5,7 @@ import "./Pagination.css";
 function Pagination({ data, setCurrentItems }) {
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
-  const itemsPerPage = 9;
+  const itemsPerPage = 18;
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));

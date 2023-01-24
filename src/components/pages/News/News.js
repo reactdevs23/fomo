@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination/Pagination";
 import "./News.css";
+import HeroSection from "./HeroSection/HeroSection";
 
 const News = ({ data }) => {
   const [currentItems, setCurrentItems] = useState([]);
@@ -9,9 +10,8 @@ const News = ({ data }) => {
   return (
     <>
       <section className="news-wrapper">
+        <HeroSection />
         <div className="container articles-container">
-          <h1>Fomo News</h1>
-
           <div className="articles py-5">
             {currentItems.map((el, i) => (
               <Link to={`/news/${i + 1}`} className="article-item" key={i}>
