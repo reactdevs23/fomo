@@ -1,151 +1,151 @@
 #header {
-    background-color: #fffcf784;
-    padding: 41px 0 46px 0;
+  background-color: #fffcf784;
+  padding: 41px 0 46px 0;
 }
 
-
 #header nav ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    gap: 60px;
-    list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
 }
 
 .logo {
-    width: 152.7px;
+  width: 152.7px;
 }
 
 .link a {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 29px;
-    color: #000000;
-    text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+  color: #000000;
+  text-decoration: none;
+}
+.link .navsActive {
+  color: #e27c23;
 }
 
 .nav-subscribe-btn {
-    background: #E27C23;
-    border-radius: 7px;
-    font-family: 'Readex Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 28px;
-    color: #FFFFFF;
-    border: 1px solid #E27C23;
-    padding: 13px 47px 13px 39px;
-    margin-left: 6px;
+  background: #e27c23;
+  border-radius: 7px;
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: #ffffff;
+  border: 1px solid #e27c23;
+  padding: 13px 47px 13px 39px;
+  margin-left: 6px;
+  transition: all ease 0.3s;
 }
 
-.effect {
-    transition: all ease .3s;
-    position: relative;
+/* .effect {
+  transition: all ease 0.3s;
+  position: relative;
 }
 
 .effect::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 7px;
-    bottom: -8.8px;
-    right: -9.4px;
-    background: #E27C23;
-    opacity: 0.2;
-    transition: all ease .3s;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+  bottom: -8.8px;
+  right: -9.4px;
+  background: #e27c23;
+  opacity: 0.2;
+  transition: all ease 0.3s;
+  z-index: -1;
 }
 
 .effect::after {
-    content: '';
-    position: absolute;
-    border-radius: 1px;
-    bottom: -6.8px;
-    right: -8.4px;
-    background: rgba(226, 124, 35, 0.2);
-    transition: all ease .3s;
-    height: 2px;
-    width: 10.79px;
-    background: #E27C23;
-    transform: translate(0px, -4px) rotate(45deg)
-}
+  content: "";
+  position: absolute;
+  border-radius: 1px;
+  bottom: -6.8px;
+  right: -8.4px;
+  background: rgba(226, 124, 35, 0.2);
+  transition: all ease 0.3s;
+  height: 2px;
+  width: 10.79px;
+  background: #e27c23;
+  transform: translate(0px, -4px) rotate(45deg);
+} */
 
 .nav-subscribe-btn.effect::before {
-    background: #E27C23;
-    opacity: 1;
+  background: #e27c23;
+  opacity: 1;
 }
 
 .nav-subscribe-btn.effect::after {
-    background: #E27C23;
+  background: #e27c23;
 }
 
-.effect:hover::after {
-    opacity: 0;
+/* .effect:hover::after {
+  opacity: 0;
 }
 
 .effect:hover::before {
-    opacity: 1;
-    right: -5px;
-    bottom: -5px;
-}
+  opacity: 1;
+  right: -5px;
+  bottom: -5px;
+} */
 
 .nav-subscribe-btn:hover {
-    background-color: white;
-    color: #E27C23;
+  background-color: white;
+  color: #e27c23;
 }
 
 #mobile-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    gap: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
 }
 
 #mobile-nav-toggler {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 .offcanvas {
-    width: 60% !important;
+  width: 60% !important;
 }
 
+@media (max-width: 1024px) {
+  #header {
+    padding: 20px 0 20px 0;
+  }
 
+  .logo {
+    width: 100.7px;
+  }
 
-@media (max-width:1024px) {
-    #header {
-        padding: 20px 0 20px 0;
-    }
+  .nav-subscribe-btn {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 8px 20px 8px 20px;
+    margin-left: 0;
+  }
 
-    .logo {
-        width: 100.7px;
-    }
+  #header nav ul {
+    gap: 30px;
+  }
 
-    .nav-subscribe-btn {
-        font-size: 20px;
-        line-height: 24px;
-        padding: 8px 20px 8px 20px;
-        margin-left: 0;
-    }
-
-    #header nav ul {
-        gap: 30px;
-
-    }
-
-    .link a {
-        font-size: 18px;
-        line-height: 24px;
-    }
+  .link a {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
-@media (max-width:768px) {
-    .logo {
-        width: 70.7px;
-    }
+@media (max-width: 768px) {
+  .logo {
+    width: 70.7px;
+  }
 }

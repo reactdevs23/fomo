@@ -5,7 +5,11 @@ import "./News.css";
 import HeroSection from "./HeroSection/HeroSection";
 
 const News = ({ data }) => {
-  const [currentItems, setCurrentItems] = useState([]);
+  const [activePage, setActivePage] = useState(1);
+  const itemsPerPage = 9;
+  const indexOfLastItem = activePage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
@@ -25,9 +29,17 @@ const News = ({ data }) => {
               </Link>
             ))}
           </div>
+        </div>{" "}
+        <div className="d-flex justify-content-center">
+          {" "}
+          <Pagination
+            itemsPerPage={itemsPerPage}
+            totalItemsCount={data.length}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
         </div>
       </section>
-      <Pagination data={data} setCurrentItems={setCurrentItems} />
     </>
   );
 };

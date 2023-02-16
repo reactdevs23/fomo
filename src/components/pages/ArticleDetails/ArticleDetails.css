@@ -2,21 +2,39 @@
   background: #fbfbfb;
   padding: 70px 0;
 }
+.textBox {
+  max-width: 1199px;
+  margin: 0 auto;
+}
 .article-details h1 {
-  font-family: "Oswald";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 700;
-  font-size: 68px;
+  font-weight: 600;
+  font-size: 50px;
   line-height: 118%;
   letter-spacing: -0.03em;
   color: #1b1c31;
   margin: 0;
   padding-bottom: 18px;
   margin-bottom: 18px;
-  border-bottom: 1px solid #000000;
+}
+.secondTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 118%;
+  letter-spacing: -0.03em;
+  color: #1b1c31;
+  padding-top: 25px;
+}
+.imageAndText {
 }
 .image {
   border-radius: 6px;
+  max-height: 550px;
+  width: 100%;
+  object-fit: cover;
 }
 .text {
   font-family: "Open Sans";
@@ -26,6 +44,7 @@
   line-height: 163%;
 
   color: #3a3a3a;
+  padding: 10px 0;
 }
 @media only screen and (max-width: 991px) {
   .article-details h1 {

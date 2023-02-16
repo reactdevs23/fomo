@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Menu = () => {
@@ -15,7 +15,7 @@ const Menu = () => {
     },
     {
       name: "Youtube",
-      link: "#",
+      link: "/youtube",
     },
   ];
   const [show, setShow] = useState(false);
@@ -34,18 +34,21 @@ const Menu = () => {
               <ul>
                 {menus.map((menu, index) => (
                   <li className="link" key={index}>
-                    <Link className="text-decoration-none" to={menu.link}>
+                    <NavLink
+                      to={menu.link}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "text-decoration-none navsActive"
+                          : "text-decoration-none "
+                      }
+                    >
                       {menu.name}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
-                <li>
-                  <button className="nav-subscribe-btn effect">
-                    Subscribe
-                  </button>
-                </li>
               </ul>
             </nav>
+            <button className="nav-subscribe-btn effect">Subscribe</button>
           </div>
         </div>
 
@@ -79,7 +82,7 @@ const Menu = () => {
                 <nav id="mobile-nav">
                   <ul className="mobile-nav-ul">
                     {menus.map((menu, index) => (
-                      <li className="link" key={index}>
+                      <li className="link w-auto d-block" key={index}>
                         <Link className="text-decoration-none" to={menu.link}>
                           {menu.name}
                         </Link>
@@ -87,7 +90,7 @@ const Menu = () => {
                     ))}
 
                     <li>
-                      <button className="nav-subscribe-btn btn-effect">
+                      <button className="nav-subscribe-btn effect">
                         Subscribe
                       </button>
                     </li>
