@@ -1,0 +1,97 @@
+.allMegazine {
+  display: grid;
+  grid-template-columns: 5.8fr 4.2fr;
+  gap: 25px;
+  padding-bottom: 100px;
+  border-bottom: 1px dashed #707070;
+}
+.titleAndSocialMedia {
+  padding: 0 10px;
+}
+.title {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 130%;
+
+  color: #000000;
+  padding-top: 4px;
+  padding-bottom: 15px;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 30px 0;
+}
+.icon {
+  color: #000;
+  font-size: 28px;
+}
+.image {
+  width: 100%;
+}
+.button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  color: #000000;
+  border: 1px solid #f7b962;
+  background: rgba(255, 255, 255, 0.57);
+
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+}
+.magazines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.magazine {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px dashed #000000;
+}
+.cratedByAndFeaturedAt {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #000000;
+}
+
+@media only screen and (max-width: 1280px) {
+  .title {
+    font-size: 19px;
+  }
+  .iocn {
+    font-size: 22px;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .cratedByAndFeaturedAt {
+    font-size: 17px;
+  }
+  .titleAndSocialMedia {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .allMegazine {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .allMegazine {
+    padding-bottom: 100px;
+  }
+}

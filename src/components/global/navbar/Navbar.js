@@ -11,7 +11,7 @@ const Menu = () => {
     },
     {
       name: "Magazine",
-      link: "#",
+      link: "/magazine",
     },
     {
       name: "Youtube",

@@ -31,7 +31,7 @@ const HeroSection = () => {
             {socialMedia.map((el, i) => (
               <a
                 className="socialMedia"
-                href="#/"
+                href={el.to}
                 target="_blank"
                 key={i}
                 rel="noreferrer"

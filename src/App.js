@@ -6,6 +6,7 @@ import Menu from "./components/global/navbar/Navbar";
 import Home from "./components/pages/Home/Home";
 import News from "./components/pages/News/News";
 import ArticleDetails from "./components/pages/ArticleDetails/ArticleDetails";
+import Magazine from "./components/pages/Magazine/Magazine";
 
 function App() {
   const data = [
@@ -527,6 +528,7 @@ function App() {
           path="/news/:id"
           element={<ArticleDetails data={data} />}
         ></Route>
+        <Route path="/magazine" element={<Magazine />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
