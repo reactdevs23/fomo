@@ -82,7 +82,7 @@ const Menu = () => {
                 <nav id="mobile-nav">
                   <ul className="mobile-nav-ul">
                     {menus.map((menu, index) => (
-                      <li className="link w-auto d-block" key={index}>
+                      <li className="link w-auto d-block py-2" key={index}>
                         <Link className="text-decoration-none" to={menu.link}>
                           {menu.name}
                         </Link>
@@ -90,7 +90,7 @@ const Menu = () => {
                     ))}
 
                     <li>
-                      <button className="nav-subscribe-btn effect">
+                      <button className="nav-subscribe-btn effect mt-2">
                         Subscribe
                       </button>
                     </li>

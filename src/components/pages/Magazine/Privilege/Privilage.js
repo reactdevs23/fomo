@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsCheck } from "react-icons/bs";
+import { AiOutlineCheck } from "react-icons/ai";
 import { HiArrowRight } from "react-icons/hi";
 import styles from "./styles.module.css";
 
@@ -21,8 +21,8 @@ const Privilege = () => {
   };
   return (
     <section className={styles.privilegeContainer}>
-      <div className={`${styles.privilege} container`}>
-        <div>
+      <div className={`${styles.privilege} `}>
+        <div className={styles.textContainer}>
           <h4 className={styles.title}>
             Creating is a privilege but it's also a gift
           </h4>
@@ -36,7 +36,7 @@ const Privilege = () => {
               <div className={styles.listItem} key={i}>
                 <span className={styles.iconContainer}>
                   {" "}
-                  <BsCheck className={styles.icon} />
+                  <AiOutlineCheck className={styles.icon} />
                 </span>{" "}
                 <p>
                   {" "}
@@ -47,7 +47,7 @@ const Privilege = () => {
             ))}
           </div>
         </div>
-        <div className={styles.seperator}></div>
+
         <div className={styles.contactBox}>
           <h4 className={styles.heading}>
             Add remarkable ideas and actionable insights to your inbox
