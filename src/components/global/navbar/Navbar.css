@@ -100,7 +100,9 @@
   background-color: white;
   color: #e27c23;
 }
-
+#mobile-nav {
+  max-width: 250px;
+}
 #mobile-nav ul {
   list-style: none;
   display: flex;
@@ -115,7 +117,7 @@
 }
 
 .offcanvas {
-  width: 60% !important;
+  max-width: 450px !important;
 }
 
 @media (max-width: 1024px) {

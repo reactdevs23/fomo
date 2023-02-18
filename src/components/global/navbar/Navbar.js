@@ -25,7 +25,7 @@ const Menu = () => {
     <header id="header">
       <div className="container">
         {/* nav */}
-        <div className="d-none d-md-block">
+        <div className="d-none">
           <div className="d-flex justify-content-between align-items-center">
             <Link to="/">
               <img className="logo" src="/images/logo.png" alt="" />
@@ -53,7 +53,7 @@ const Menu = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="d-md-none">
+        <div className="">
           <div className="d-flex justify-content-between align-items-center">
             <Link to="/">
               <img className="logo" src="/images/logo.png" alt="" />
@@ -67,7 +67,7 @@ const Menu = () => {
               show={show}
               onHide={handleClose}
               placement="end"
-              className="d-md-none"
+              className=""
             >
               <Offcanvas.Header className="border-bottom">
                 <Offcanvas.Title>Menu</Offcanvas.Title>

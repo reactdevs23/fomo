@@ -46,7 +46,10 @@
   list-style: none;
   padding: 0;
 }
-
+#footer .link-group {
+  display: flex;
+  flex-wrap: wrap;
+}
 #footer .link-group-item ul li a {
   font-family: "Open Sans";
   font-style: normal;
