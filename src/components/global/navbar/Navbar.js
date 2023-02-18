@@ -3,7 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Menu = () => {
+const Menu = ({ noLogo }) => {
   const menus = [
     {
       name: "News",
@@ -22,10 +22,10 @@ const Menu = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <header id="header">
+    <header id="header" className={noLogo && "myHeader"}>
       <div className="container">
         {/* nav */}
-        <div className="d-none">
+        <div className={noLogo ? "d-none" : "d-none d-md-block"}>
           <div className="d-flex justify-content-between align-items-center">
             <Link to="/">
               <img className="logo" src="/images/logo.png" alt="" />
@@ -53,11 +53,19 @@ const Menu = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="">
-          <div className="d-flex justify-content-between align-items-center">
-            <Link to="/">
-              <img className="logo" src="/images/logo.png" alt="" />
-            </Link>
+        <div className={noLogo ? "d-block" : "d-md-none"}>
+          <div
+            className={
+              noLogo
+                ? "d-flex justify-content-end align-center"
+                : "d-flex justify-content-between align-items-center"
+            }
+          >
+            {!noLogo && (
+              <Link to="/">
+                <img className="logo" src="/images/logo.png" alt="" />
+              </Link>
+            )}
             <button id="mobile-nav-toggler" onClick={handleShow}>
               <img src="/images/menu.png" width="20px" alt="" />
             </button>
@@ -67,7 +75,7 @@ const Menu = () => {
               show={show}
               onHide={handleClose}
               placement="end"
-              className=""
+              className={noLogo ? "d-block" : "d-md-none"}
             >
               <Offcanvas.Header className="border-bottom">
                 <Offcanvas.Title>Menu</Offcanvas.Title>

@@ -520,7 +520,6 @@ function App() {
   ];
   return (
     <BrowserRouter>
-      <Menu />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/news" element={<News data={data} />}></Route>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Pagination from "./Pagination/Pagination";
 import "./News.css";
 import HeroSection from "./HeroSection/HeroSection";
+import Menu from "../../global/navbar/Navbar";
 
 const News = ({ data }) => {
   const [activePage, setActivePage] = useState(1);
@@ -13,6 +14,7 @@ const News = ({ data }) => {
 
   return (
     <>
+      <Menu />
       <section className="news-wrapper">
         <HeroSection />
         <div className="container articles-container">

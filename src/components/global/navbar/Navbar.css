@@ -1,8 +1,12 @@
 #header {
-  background-color: #fffcf784;
   padding: 41px 0 46px 0;
 }
-
+.myHeader {
+  position: fixed;
+  width: 100%;
+  background-color: none;
+  z-index: 1;
+}
 #header nav ul {
   display: flex;
   padding: 0;
