@@ -11,12 +11,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/news" element={<News data={data} />}></Route>
-        <Route
-          path="/news/:id"
-          element={<ArticleDetails data={data} />}
-        ></Route>
-        <Route path="/magazine" element={<Magazine />}></Route> */}
+  
       </Routes>
       <Footer />
     </BrowserRouter>
