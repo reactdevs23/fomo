@@ -1,0 +1,27 @@
+.heroSection {
+  background: url("/public/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 250px;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fef4db;
+  opacity: 1;
+  z-index: -1;
+}
+@media only screen and (max-width: 425px) {
+  .heroSection {
+    width: 100%;
+  }
+}

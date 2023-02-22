@@ -1,0 +1,63 @@
+.image {
+  width: 100%;
+}
+.title {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 120%;
+
+  color: #000000;
+  padding: 15px 0;
+  padding-bottom: 25px;
+}
+.cratedByAndFeaturedAt {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #000000;
+  margin: 0;
+}
+.text {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 125%;
+  color: #000000;
+  margin: 0;
+  padding-top: 25px;
+}
+@media only screen and (max-width: 1280px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .cratedByAndFeaturedAt {
+    font-size: 17px;
+  }
+  .text {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .magazineDetails {
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #707070;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .cratedByAndFeaturedAt {
+    font-size: 15px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}

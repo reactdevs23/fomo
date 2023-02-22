@@ -2,28 +2,26 @@
   max-width: 1403px !important;
 }
 
-@media (min-width:1500px) {
+@media (min-width: 1500px) {
   .container {
     padding: 0 !important;
   }
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
   .container {
     padding: 0 3rem !important;
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .container {
     padding: 0 2rem !important;
   }
 }
 
-@media (max-width:425px) {
+@media (max-width: 425px) {
   .container {
-    padding: 0 0.5rem !important;
+    padding: 0 0.8rem !important;
   }
 }
-
-
