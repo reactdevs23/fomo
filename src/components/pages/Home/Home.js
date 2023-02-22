@@ -2,7 +2,7 @@ import React from "react";
 
 import Hero from "./hero/Hero";
 
-import Subscribe from "./Subscribe/Subscribe";
+// import Subscribe from "./Subscribe/Subscribe";
 import Trust from "./trust/Trust";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
 
       <Trust />
-      <Subscribe />
+      {/* <Subscribe /> */}
     </div>
   );
 };
