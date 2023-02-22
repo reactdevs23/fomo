@@ -48,19 +48,7 @@ const Menu = ({ noLogo }) => {
                 ))}
               </ul>
             </nav>
-            {/* <button className="nav-subscribe-btn effect">Subscribe</button> */}
-            <iframe
-              title="subscribe"
-              src="https://embeds.beehiiv.com/71db7108-1d1f-4720-851c-77e4ee50363c?slim=true"
-              data-test-id="beehiiv-embed"
-              frameBorder="0"
-              scrolling="no"
-              style={{
-                magin: "0",
-                borderRadius: "0px",
-                backgroundColor: "transparent",
-              }}
-            ></iframe>
+            <button className="nav-subscribe-btn effect">Subscribe</button>
           </div>
         </div>
 
