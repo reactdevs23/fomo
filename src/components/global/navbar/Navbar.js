@@ -6,7 +6,7 @@ import "./Navbar.css";
 const Menu = () => {
   const menus = [
     {
-      name: "Buy Fomo Magazine",
+      name: "Buy FOMO Magazine",
       link: "#",
     },
     {
