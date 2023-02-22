@@ -1,31 +1,27 @@
 import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Menu = ({ noLogo }) => {
+const Menu = () => {
   const menus = [
     {
-      name: "News",
-      link: "/news",
-    },
-    {
-      name: "Magazine",
-      link: "/magazine",
+      name: "Buy Fomo Magazine",
+      link: "#",
     },
     {
       name: "Youtube",
-      link: "/youtube",
+      link: "#",
     },
   ];
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <header id="header" className={noLogo && "myHeader"}>
+    <header id="header">
       <div className="container">
         {/* nav */}
-        <div className={noLogo ? "d-none" : "d-none d-md-block"}>
+        <div className="d-none d-md-block">
           <div className="d-flex justify-content-between align-items-center">
             <Link to="/">
               <img className="logo" src="/images/logo.png" alt="" />
@@ -34,16 +30,14 @@ const Menu = ({ noLogo }) => {
               <ul>
                 {menus.map((menu, index) => (
                   <li className="link" key={index}>
-                    <NavLink
-                      to={menu.link}
-                      className={({ isActive }) =>
-                        isActive
-                          ? "text-decoration-none navsActive"
-                          : "text-decoration-none "
-                      }
+                    <a
+                      href={menu.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-decoration-none navsActive text-decoration-none "
                     >
                       {menu.name}
-                    </NavLink>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -53,19 +47,12 @@ const Menu = ({ noLogo }) => {
         </div>
 
         {/* mobile nav */}
-        <div className={noLogo ? "d-block" : "d-md-none"}>
-          <div
-            className={
-              noLogo
-                ? "d-flex justify-content-end align-center"
-                : "d-flex justify-content-between align-items-center"
-            }
-          >
-            {!noLogo && (
-              <Link to="/">
-                <img className="logo" src="/images/logo.png" alt="" />
-              </Link>
-            )}
+        <div className="d-md-none">
+          <div className="d-flex justify-content-between align-items-center">
+            <Link to="/">
+              <img className="logo" src="/images/logo.png" alt="" />
+            </Link>
+
             <button id="mobile-nav-toggler" onClick={handleShow}>
               <img src="/images/menu.png" width="20px" alt="" />
             </button>
@@ -75,7 +62,7 @@ const Menu = ({ noLogo }) => {
               show={show}
               onHide={handleClose}
               placement="end"
-              className={noLogo ? "d-block" : "d-md-none"}
+              className="d-md-none"
             >
               <Offcanvas.Header className="border-bottom">
                 <Offcanvas.Title>Menu</Offcanvas.Title>
@@ -95,9 +82,14 @@ const Menu = ({ noLogo }) => {
                         key={index}
                         onClick={handleClose}
                       >
-                        <Link className="text-decoration-none" to={menu.link}>
+                        <a
+                          className="text-decoration-none"
+                          target="_blank"
+                          rel="noreferrer"
+                          href={menu.link}
+                        >
                           {menu.name}
-                        </Link>
+                        </a>
                       </li>
                     ))}
 
